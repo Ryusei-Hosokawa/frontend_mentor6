@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+// ロゴここから //
+@mixin logo {
+    display: block;
+    width: 100%;
+    max-width: 119px;
+    margin: 0 auto;
+}
+// ロゴここまで //  

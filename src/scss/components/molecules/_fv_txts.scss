@@ -1,0 +1,12 @@
+@charset "utf-8";
+@use "../atoms/atoms_index" as atom;
+
+// ファーストビューのメインタイトルとテキストここから //
+@mixin fv_txts() {
+    .message__cover {
+        @include atom.main_ttl();
+        @include atom.sta_txt();
+        @include atom.sta_btn();
+    }
+}
+// ファーストビューのメインタイトルとテキストここまで //

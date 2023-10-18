@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+// メインタイトルここから //
+@mixin main_ttl() {
+    .content__ttl {
+        text-align: center;
+        font-size: 64px;
+        font-weight: 900;
+        line-height: 1em;
+        margin: 0 0 40px;
+        color: #28283d;
+    }
+}
+// メインタイトルここまで //

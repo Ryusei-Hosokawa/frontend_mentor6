@@ -2,9 +2,10 @@
 
 // ロゴここから //
 @mixin logo {
-    display: block;
-    width: 100%;
-    max-width: 119px;
-    margin: 0 auto;
+    .logo {
+        width: 100%;
+        max-width: 119px;
+        margin: 0 auto 62px;
+    }
 }
 // ロゴここまで //  

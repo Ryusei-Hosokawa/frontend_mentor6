@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+// スタンダードテキストここから //
+@mixin sta_txt($color: #87879D) {
+    .content__txt {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.44em;
+        color: $color;
+        text-align: center;
+        margin: 0 0 32px;
+    }
+}
+// スタンダードテキストここまで //

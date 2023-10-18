@@ -1,0 +1,12 @@
+@charset "utf-8";
+@use '../atoms/atoms_index' as atom;
+@use '../molecules/molecules_index' as molecule;
+
+// ファーストビューのメインテキストとボタンここから //
+@mixin main_message {
+    .message__cover {
+        @include molecule.fv_txts();
+        @include atom.sta_btn();
+    }
+}
+// ファーストビューのメインテキストとボタンここまで //

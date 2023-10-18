@@ -1,0 +1,21 @@
+@charset "utf-8";
+@use '../organisms/organisms_index' as organism;
+@use '../atoms/atoms_index' as atom;
+
+// 本来であればトップページ格納場所ここから //
+@mixin fv {
+    .sec01 {
+        padding: 82px 0 0;
+        overflow: hidden;
+        .base {
+            width: 100%;
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 15px;
+            @include atom.logo;
+            @include organism.fv_contents;
+            @include atom.numbering();
+        }
+    }
+}
+// 本来であればトップページ格納場所ここまで //  

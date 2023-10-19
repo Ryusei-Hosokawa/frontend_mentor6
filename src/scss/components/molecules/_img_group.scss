@@ -3,15 +3,15 @@
 @use "../atoms/atoms_index" as atom;
 
 // ボタンが２つ格納されたコンポーネントここから //
-@mixin fv_btns($maxWidth: 348px) {
-    .btn__cover {
+@mixin img_group() {
+    .img__group {
         width: 100%;
-        max-width: $maxWidth;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
-        margin: 0 auto;
-        @include atom.sta_btn($className:'what__is',$btnPadding: 18px 29px, $hoverColor: #B18BDD, $bgColor: #855FB1);
+        margin: 0 0 80px;
+        @include atom.img_cover();
     }
 }
 // ボタンが２つ格納されたコンポーネントここまで //

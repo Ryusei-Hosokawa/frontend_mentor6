@@ -1,0 +1,13 @@
+@charset "utf-8";
+@use "../atoms/atoms_index" as atom;
+
+// セカンダリーセクションのタイトルとテキストここから //
+@mixin second_txts() {
+    .message__cover {
+        margin: 0 0 160px;
+        @include atom.sub_ttl();
+        @include atom.content_ttl();
+        @include atom.sta_txt();
+    }
+}
+// セカンダリーセクションのメインタイトルとテキストここまで //

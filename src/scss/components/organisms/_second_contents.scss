@@ -3,14 +3,10 @@
 @use '../molecules/molecules_index' as molecule;
 
 // ファーストビューのコンテンツコンポーネントここから //
-@mixin fv_contents() {
-    .fv__contents{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0 -50px 194px;
-        @include molecule.fv_txts();
-        @include molecule.fv_btns();
+@mixin second_contents() {
+    .contents{
+        @include molecule.img_group();
+        @include molecule.second_txts();
     }
 }
 // ファーストビューのコンテンツコンポーネントここまで //

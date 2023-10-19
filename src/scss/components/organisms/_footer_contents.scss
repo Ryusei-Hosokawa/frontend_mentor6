@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+@use '../atoms/_atoms_index.scss' as atom;
+
+// 通常コンテンツサブタイトルここから //
+@mixin footer_contents() {
+    .footer__contents {
+        position: relative;
+        z-index: 20;
+        display: flex;
+        justify-content: space-between;
+        @include atom.content_ttl($txtAlign: left, $mBottom: 0, $color: #fafafa);
+        @include atom.sta_txt($txtAlign: left, $mBottom: 0, $color: #fafafa);
+        .btn__cover {
+            display: grid;
+            place-items: center;
+            @include atom.sta_btn($bgColor: #855FB1, $versionTxtColor: #D9B8FF,$hoverColor: #B18BDD);
+        }
+    }
+}
+// 通常コンテンツサブタイトルここまで //

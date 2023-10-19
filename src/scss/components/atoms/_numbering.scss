@@ -4,6 +4,7 @@
 @mixin numbering($color: #87879D, $border: rgba(135, 135, 157, 0.25)) {
     .section__num {
         position: relative;
+        z-index: 20;
         width: 56px;
         height: 56px;
         border-radius: 50%;

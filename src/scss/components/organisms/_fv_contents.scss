@@ -1,16 +1,23 @@
 @charset "utf-8";
-@use '../atoms/atoms_index' as atom;
-@use '../molecules/molecules_index' as molecule;
+
+@use '../../global/media_query' as *;
+@use '../atoms/_atoms_index.scss' as atom;
+@use '../organisms/_main_message.scss' as main_message;
 
 // ファーストビューのコンテンツコンポーネントここから //
 @mixin fv_contents() {
     .fv__contents{
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
         margin: 0 -50px 194px;
-        @include molecule.fv_txts();
-        @include molecule.fv_btns();
+        @include max(1270px) {
+            justify-content: center;
+            gap: 72px 32px;
+            margin: 0 -50px 164px;
+        }
+        @include main_message.main_message();
     }
 }
 // ファーストビューのコンテンツコンポーネントここまで //

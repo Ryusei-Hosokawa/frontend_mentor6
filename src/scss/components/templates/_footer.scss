@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-@use "../../global/_base.scss" as *;
+@use "../../global/global_index" as *;
 @use "../atoms/atoms_index" as atom;
 @use "../organisms/organisms_index" as organism;
 
@@ -11,8 +11,15 @@
         z-index: 0;
         display: grid;
         place-items: center;
-        min-height: 308px;
+        min-height: $footerHeight;
         background: url(../../../../build/assets/imgs/desktop/image-footer.jpg) no-repeat 50% 0 / cover;
+        @include max(md) {
+            min-height: 428px;
+            background: url(../../../../build/assets/imgs/tablet/image-footer.jpg) no-repeat 50% 0 / cover;
+        }
+        @include max(sm) {
+            background: url(../../../../build/assets/imgs/mobile/image-footer.jpg) no-repeat 50% 0 / cover;
+        }
         @include base() {
             @include organism.footer_contents();
         }
@@ -26,6 +33,9 @@
             height: 308px;
             background: $footerBg;
             opacity: 0.9;
+            @include max(md) {
+                height: 428px;
+            }
         }
     }
 }

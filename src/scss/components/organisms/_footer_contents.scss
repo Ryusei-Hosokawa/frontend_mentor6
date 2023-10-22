@@ -1,6 +1,7 @@
 @charset "utf-8";
 
-@use '../atoms/_atoms_index.scss' as atom;
+@use "../../global/global_index.scss" as *;
+@use "../atoms/_atoms_index.scss" as atom;
 
 // 通常コンテンツサブタイトルここから //
 @mixin footer_contents() {
@@ -11,10 +12,17 @@
         justify-content: space-between;
         @include atom.content_ttl($txtAlign: left, $mBottom: 0, $color: #fafafa);
         @include atom.sta_txt($txtAlign: left, $mBottom: 0, $color: #fafafa);
+        @include max(md) {
+            @include atom.content_ttl($txtAlign: center, $mBottom: 32px);
+            @include atom.sta_txt($txtAlign: center, $mBottom: 40px);
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
         .btn__cover {
             display: grid;
             place-items: center;
-            @include atom.sta_btn($bgColor: #855FB1, $versionTxtColor: #D9B8FF,$hoverColor: #B18BDD);
+            @include atom.sta_btn($bgColor: #855fb1, $versionTxtColor: #d9b8ff, $hoverColor: #b18bdd);
         }
     }
 }

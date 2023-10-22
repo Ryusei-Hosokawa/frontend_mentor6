@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+@use '../../global/global_index' as *;
+
 // スタンダードテキストここから //
 @mixin sta_txt($txtAlign: center, $mBottom: 32px, $color: #87879D) {
     .content__txt {
@@ -9,6 +11,10 @@
         line-height: 1.44em;
         color: $color;
         margin: 0 0 $mBottom;
+        @include max(1270px) {
+            font-size: 16px;
+            line-height: 1.6em;
+        }
     }
 }
 // スタンダードテキストここまで //

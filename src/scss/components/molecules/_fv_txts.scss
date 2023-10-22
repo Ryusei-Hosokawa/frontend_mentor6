@@ -3,10 +3,8 @@
 
 // ファーストビューのメインタイトルとテキストここから //
 @mixin fv_txts() {
-    .message__cover {
-        @include atom.main_ttl();
-        @include atom.sta_txt();
-        @include atom.sta_btn();
-    }
+    @include atom.main_ttl();
+    @include atom.sta_txt();
+    @include atom.sta_btn();
 }
 // ファーストビューのメインタイトルとテキストここまで //

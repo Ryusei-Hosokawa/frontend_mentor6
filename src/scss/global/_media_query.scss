@@ -1,22 +1,57 @@
 @charset "utf-8";
 
+@use "./_variables.scss" as *;
+@use "./_function.scss" as *;
+
 // メディアクエリコンポーネントここから //
-$breakpoints: (
-    "sm": 480px,
-    "md": 767px,
-    "lg": 1024px
-);
+@mixin max($breakpoint) {
+    $value: getBreakpointValue($breakpoint);
+    // もし$valueがnullならメディアクエリの生成をスキップ
+    @if $value {
+        @media (max-width: $value) {
+            @content;
+        }
+    }
+}
 
-@mixin mq($breakpoint) {
-    $value: map-get($breakpoints, $breakpoint);
+@mixin min($breakpoint) {
+    $value: getBreakpointValue($breakpoint);
 
+    // もし$valueがnullならメディアクエリの生成をスキップ
     @if $value {
         @media (min-width: $value) {
             @content;
         }
-    } @else {
-        @warn "Unknown breakpoint: #{$breakpoint}.";
     }
 }
-
 // メディアクエリコンポーネントここまで //
+
+// レスポンシブに合わせての<br>の使い分けここから //
+@mixin br($lg, $md, $sm) {
+    br.lg {
+        @include mq("md") {
+            display: none;
+        }
+    }
+    
+    br.md {
+        display: none; // 初期状態では非表示
+    
+        @include mq("md") {
+            display: block;
+        }
+    
+        @include mq("sm") {
+            display: none;
+        }
+    }
+    
+    br.sm {
+        display: none; // 初期状態では非表示
+    
+        @include mq("sm") {
+            display: block;
+        }
+    }
+}
+// レスポンシブに合わせての<br>の使い分けここまで //

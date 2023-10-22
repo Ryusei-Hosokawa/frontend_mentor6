@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+@use '../../global/global_index' as *;
 @use "../atoms/atoms_index" as atom;
 
 // ボタンが２つ格納されたコンポーネントここから //
@@ -11,6 +12,12 @@
         justify-content: space-between;
         align-items: center;
         margin: 0 0 80px;
+        @include max(1270px) {
+            max-width: 689px;
+            justify-content: center;
+            gap: 0 11px;
+            margin: 0 auto 50px;
+        }
         @include atom.img_cover();
     }
 }

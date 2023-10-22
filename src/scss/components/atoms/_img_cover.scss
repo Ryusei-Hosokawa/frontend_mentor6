@@ -3,7 +3,7 @@
 // ボタンが２つ格納されたコンポーネントここから //
 @mixin img_cover() {
     .img__cover {
-        width: max(23% , 200px);
+        width: max(23% , 164px);
         border-radius: 8px;
         overflow: hidden;
     }

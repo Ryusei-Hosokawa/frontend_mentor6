@@ -13,11 +13,14 @@
         @include atom.content_ttl($txtAlign: left, $mBottom: 0, $color: #fafafa);
         @include atom.sta_txt($txtAlign: left, $mBottom: 0, $color: #fafafa);
         @include max(md) {
-            @include atom.content_ttl($txtAlign: center, $mBottom: 32px);
-            @include atom.sta_txt($txtAlign: center, $mBottom: 40px);
+            @include atom.content_ttl($txtAlign: center, $mBottom: 32px, $color: #fafafa);
+            @include atom.sta_txt($txtAlign: center, $mBottom: 40px, $color: #fafafa);
             flex-direction: column;
             justify-content: center;
             align-items: center;
+        }
+        @include max(sm) {
+            @include atom.content_ttl($size:32px, $txtAlign: center, $mBottom: 32px, $color: #fafafa);
         }
         .btn__cover {
             display: grid;

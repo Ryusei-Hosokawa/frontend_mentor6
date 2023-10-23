@@ -25,33 +25,3 @@
     }
 }
 // メディアクエリコンポーネントここまで //
-
-// レスポンシブに合わせての<br>の使い分けここから //
-@mixin br($lg, $md, $sm) {
-    br.lg {
-        @include mq("md") {
-            display: none;
-        }
-    }
-    
-    br.md {
-        display: none; // 初期状態では非表示
-    
-        @include mq("md") {
-            display: block;
-        }
-    
-        @include mq("sm") {
-            display: none;
-        }
-    }
-    
-    br.sm {
-        display: none; // 初期状態では非表示
-    
-        @include mq("sm") {
-            display: block;
-        }
-    }
-}
-// レスポンシブに合わせての<br>の使い分けここまで //

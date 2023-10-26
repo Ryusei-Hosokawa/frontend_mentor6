@@ -6,25 +6,22 @@
 
 // brのレスポンシブ対応ここから //
 br.lg {
-    display: block;
-    @include max(lg) {
-        display: none;
+    display: none;
+    @include min(md) {
+        display: block !important;
     }
 }
 
 br.md {
-    display: block;
-    @include min(lg) {
-        display: none;
-    }
-    @include max(sm) {
-        display: none;
+    display: none;
+    @include between(sm, 768px) {
+        display: block !important;
     }
 }
 
 br.sm {
-    display: block;
-    @include min(sm) {
-        display: none;
+    display: none;
+    @include max(sm) {
+        display: block !important;
     }
 }

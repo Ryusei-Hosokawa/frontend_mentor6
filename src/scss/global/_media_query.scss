@@ -24,4 +24,16 @@
         }
     }
 }
+
+@mixin between($breakpoint1, $breakpoint2) {
+    $minValue: getBreakpointValue($breakpoint1);
+    $maxValue: getBreakpointValue($breakpoint2);
+
+    // もし$valueがnullならメディアクエリの生成をスキップ
+    @if $minValue and $maxValue {
+        @media ($minValue < width < $maxValue) {
+            @content;
+        }
+    }
+}
 // メディアクエリコンポーネントここまで //

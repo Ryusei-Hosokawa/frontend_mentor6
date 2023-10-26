@@ -1,4 +1,5 @@
 @charset "utf-8";
+@use '../../global/global_index' as *;
 
 // 通常コンテンツサブタイトルここから //
 @mixin content_ttl($size:40px, $txtAlign: center, $mBottom: 32px, $color: #28283D) {

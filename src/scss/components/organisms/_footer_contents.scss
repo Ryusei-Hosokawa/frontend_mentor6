@@ -12,15 +12,23 @@
         justify-content: space-between;
         @include atom.content_ttl($txtAlign: left, $mBottom: 0, $color: #fafafa);
         @include atom.sta_txt($txtAlign: left, $mBottom: 0, $color: #fafafa);
-        @include max(md) {
-            @include atom.content_ttl($txtAlign: center, $mBottom: 32px, $color: #fafafa);
-            @include atom.sta_txt($txtAlign: center, $mBottom: 40px, $color: #fafafa);
+        @include max(950px) {
+            @include atom.content_ttl($txtAlign: left, $mBottom: 24px, $color: #fafafa);
+        @include atom.sta_txt($txtAlign: left, $mBottom: 32px, $color: #fafafa);
             flex-direction: column;
             justify-content: center;
             align-items: center;
         }
-        @include max(sm) {
+        @include max(md) {
+            @include atom.content_ttl($txtAlign: center, $mBottom: 27px, $color: #fafafa);
+            @include atom.sta_txt($txtAlign: center, $mBottom: 35px, $color: #fafafa);
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        @include max(760px) {
             @include atom.content_ttl($size:32px, $txtAlign: center, $mBottom: 32px, $color: #fafafa);
+            @include atom.sta_txt($txtAlign: center, $mBottom: 24px, $liHeight: 1.4em, $color: #fafafa);
         }
         .btn__cover {
             display: grid;

@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 // このサイト上で一番スタンダードなボタンのデザインのベースここから //
-@mixin sta_btn($className: 'download' , $btnPadding: 18px 40px, $bgColor: #4D96A9, $versionTxtColor: #8FE3F9, $hoverColor: #71C0D4) {
+@mixin sta_btn($className: 'download' , $btnPadding: 21px 40px, $bgColor: #4D96A9, $versionTxtColor: #8FE3F9, $hoverColor: #71C0D4) {
     .btn.#{$className} {
         display: inline-block;
         font-weight: 900;

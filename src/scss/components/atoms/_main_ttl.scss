@@ -3,20 +3,14 @@
 @use '../../global/global_index' as *;
 
 // メインタイトルここから //
-@mixin main_ttl() {
+@mixin main_ttl($size: 40px, $mBottom: 32px) {
     .content__ttl {
         text-align: center;
-        font-size: 64px;
+        font-size: $size;
         font-weight: 900;
         line-height: 1em;
-        margin: 0 0 40px;
+        margin: 0 0 $mBottom;
         color: #28283d;
-        @include max('md') {
-            font-size: 48px;
-        }
-        @include max('sm') {
-            font-size: 40px;
-        }
     }
 }
 // メインタイトルここまで //
